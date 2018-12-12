@@ -14,16 +14,27 @@ for (let i = 0; i<100; i++) {
 
     console.log(p);
 
-    const sentenceText = document.createTextNode('He aprendido bien cómo funcionan los bucles');
+    const sentenceText = document.createTextNode('He aprendido bien cómo funcionan los bucles' );
 
-    const newSentence =  p.appendChild(sentenceText);
+    ///////No hace falta meterlos en nuevas variables porque ya están creadas: Al añadirles el appenchild, quedan modificadas y se pueden volver a utilizar con el nombre que ya tenían.////
+   p.appendChild(sentenceText);
 
-   const htmlElement = board.appendChild(newSentence);
+   board.appendChild(p);
 
-   
+   const select = document.createElement('select');
+
+   select.classList.add('select-element');
+
+   select.innerHTML = ` <option value="blanco">blanco</option>
+   <option value="azul">azul</option>
+   <option value="rojo">rojo</option>
+   <option value="verde">verde</option>
+   <option value="amarillo">amarillo</option>
+   <option value="rosa">rosa</option>`;
+
+   p.appendChild(select);
 
 }
-
 
 
 
