@@ -1,0 +1,17 @@
+
+@import url(https://fonts.googleapis.com/css?family=Walter+Turncoat);
+
+.board {
+background-color: black;
+color: white;
+font-family: "Walter Turncoat";
+text-align: center;
+font-size: 35px;
+}
+
+.sentence {
+    display: block;
+    color: red;
+    font-size: 50px;
+}
+
