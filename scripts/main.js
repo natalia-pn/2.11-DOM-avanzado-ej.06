@@ -50,16 +50,38 @@ function changeColor(event) {
 
    //I can't see the difference when using .selectedIndex.
 
-   const selectEvent = event.currentTarget;
+   const selectEvent = event.currentTarget.selectedIndex;
  
    const selectValue = select.value;
 
    console.log(selectValue);
 
-   if (selectValue === 'rojo') {
+
+   //need to add a remove function.
+
+   if(selectValue === 'rojo') {
          p.classList.toggle('red');
          console.log(select);
-   }
+
+   } if(selectValue === 'amarillo') {
+      p.classList.toggle('yellow');
+      console.log(select);
+
+   } if(selectValue === 'blanco') {
+      p.classList.toggle('white');
+      console.log(select);
+
+   } if(selectValue === 'azul') {
+      p.classList.toggle('blue');
+      console.log(select);
+      
+   } if(selectValue === 'rosa') {
+      p.classList.toggle('pink');
+      console.log(select);
+   } if(selectValue === 'verde') {
+      p.classList.toggle('green');
+      console.log(select);
+   } 
 }
 
 select.addEventListener('change', changeColor);
