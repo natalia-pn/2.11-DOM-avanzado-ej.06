@@ -3,7 +3,6 @@
 
 .board {
 background-color: black;
-color: white;
 font-family: "Walter Turncoat";
 text-align: center;
 font-size: 35px;
@@ -11,5 +10,30 @@ font-size: 35px;
 
 .sentence {
     display: block;
+    color: white;
+}
+
+.red {
+    color: red;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
+
+.pink {
+    color: pink;
+}
+
+.white {
+    color: white;
 }
 

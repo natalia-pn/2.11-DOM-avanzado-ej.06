@@ -5,6 +5,7 @@ const board = document.querySelector('.board');
 
 
 
+
 for (let i = 0; i<100; i++) {
 
 
@@ -35,6 +36,51 @@ for (let i = 0; i<100; i++) {
    p.appendChild(select);
 
 }
+
+
+//If I put the const = select at the start of the document, the event listener doesn't recognise it.
+
+const select = document.querySelector('.select-element');
+
+//I'm defining it again outside the for loop.
+
+const p = document.querySelector('.sentence');
+
+function changeColor(event) {
+
+   //I can't see the difference when using .selectedIndex.
+
+   const selectEvent = event.currentTarget;
+ 
+   const selectValue = select.value;
+
+   console.log(selectValue);
+
+   if (selectValue === 'rojo') {
+         p.classList.toggle('red');
+         console.log(select);
+   }
+}
+
+select.addEventListener('change', changeColor);
+
+
+
+
+
+
+
+
+
+// Algunas pistas para esta tercera parte:
+
+// primero haced funcionar un combo para una única línea
+
+// investigad cómo funciona el evento change de los elementos tipo select (documetación de MDN)
+
+// desde el objeto event de la función de callback, podemos acceder al select que ha provocado el evento mediante event.currentTarget; incluso al índice (como en un array) de la opción seleccionada con event.currentTarget.selectedIndex
+
+
 
 
 
